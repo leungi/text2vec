@@ -83,7 +83,7 @@ text2vec uses a parallel stochastic gradient descent algorithm. By default it wi
 Let's fit our model. (It can take several minutes to fit!)
 
 ```{r, "GloVe", message=TRUE}
-glove = GlobalVectors$new(word_vectors_size = 50, x_max = 10)
+glove = GlobalVectors$new(word_vectors_size = 50, vocabulary = vocab, x_max = 10)
 wv_main = glove$fit_transform(tcm, n_iter = 10, convergence_tol = 0.01, n_threads = 8)
 ```
 ```{r}
